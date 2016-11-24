@@ -1,0 +1,48 @@
+<component name="libraryTable">
+  <library name="activation-1.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/activation-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/asm-3.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/comresrcgen-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/FastInfoset-1.2.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/grizzly-servlet-webserver-1.9.45.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/gson-2.2.2-2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/gwt-graphics-0.9.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jackson-core-asl-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jackson-jaxrs-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jackson-mapper-asl-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jackson-xc-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/javax.ws.rs-api-2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jaxb-api-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jaxb-impl-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jdom-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jersey-bundle-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jersey-client-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jersey-client.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jersey-common.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jersey-container-servlet-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jersey-container-servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jersey-core-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jersey-grizzly-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jersey-multipart-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jersey-server.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jettison-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/json-simple-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/localizer-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/mail-1.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/mimepull-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/mysql-connector-java-5.1.36-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/persistence-api-1.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/rome-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/stax-api-1.0-2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/wadl-cmdline-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/wadl-core-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jaxb-xjc-2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/gwt-graphics-0.9.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Javaklientbianca/DIS-eksamen-v2/lib/jaxb-xjc-2.2.jar!/1.0" />
+    </SOURCES>
+  </library>
+</component>
