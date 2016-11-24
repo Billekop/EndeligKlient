@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="297ff2de-212f-40c8-afa0-5f3181328305" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/activation_1_1.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/activation_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/jersey.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KlientenEndelig.iml" afterPath="$PROJECT_DIR$/KlientenEndelig.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sdk/HTTPrequest.java" afterPath="$PROJECT_DIR$/src/sdk/HTTPrequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sdk/connection.java" afterPath="$PROJECT_DIR$/src/sdk/connection.java" />
     </list>
     <ignored path="KlientenEndelig.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connection.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="connection.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sdk/connection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="183">
+              <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTTPrequest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HTTPrequest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sdk/HTTPrequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="32" column="72" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="72" />
+            <state relative-caret-position="33">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -172,9 +170,9 @@
         <option value="$PROJECT_DIR$/src/models/userLogin.java" />
         <option value="$PROJECT_DIR$/src/sdk/config.java" />
         <option value="$PROJECT_DIR$/src/mainClass.java" />
-        <option value="$PROJECT_DIR$/src/sdk/connection.java" />
         <option value="$PROJECT_DIR$/src/controller/controller.java" />
         <option value="$PROJECT_DIR$/src/sdk/HTTPrequest.java" />
+        <option value="$PROJECT_DIR$/src/sdk/connection.java" />
       </list>
     </option>
   </component>
@@ -762,7 +760,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479991869312</updated>
-      <workItem from="1479991872719" duration="6338000" />
+      <workItem from="1479991872719" duration="6551000" />
     </task>
     <task id="LOCAL-00001" summary="ny">
       <created>1479994809824</created>
@@ -799,11 +797,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479998866358</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ny">
+      <created>1479999423012</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1479999423012</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6338000" />
+    <option name="totallyTimeSpent" value="6551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="0" width="980" height="1090" extended-state="0" />
@@ -952,16 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sdk/connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mainClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
@@ -972,9 +967,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sdk/HTTPrequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="32" column="72" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="72" />
+        <state relative-caret-position="33">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sdk/connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
