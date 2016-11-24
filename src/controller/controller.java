@@ -8,11 +8,19 @@ import java.util.ArrayList;
 public class controller {
 
 
-    public controller(){}
+    public controller(){
+        Scanner input = new Scanner(System.in);
+    }
+
 
     public void hovedMenu (){
 
-        String username, password;
+        String username;
+        String password;
+
+        System.out.println("Velkommen til Bookit");
+        System.out.println("Her er login menuen");
+
     }
 
 }
