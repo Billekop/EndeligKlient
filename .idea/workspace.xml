@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="297ff2de-212f-40c8-afa0-5f3181328305" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/controller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/encrypter/crypter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/encrypter/decrypter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/encrypter/digester.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mainClass.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/book.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/curriculum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/user.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/userLogin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/controller.java" afterPath="$PROJECT_DIR$/src/controller/controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/book.java" afterPath="$PROJECT_DIR$/src/models/book.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/curriculum.java" afterPath="$PROJECT_DIR$/src/models/curriculum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/user.java" afterPath="$PROJECT_DIR$/src/models/user.java" />
     </list>
     <ignored path="KlientenEndelig.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/controller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="user.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/models/user.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            <state relative-caret-position="300">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -69,8 +63,8 @@
       <file leaf-file-name="curriculum.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/curriculum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state relative-caret-position="1375">
+              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -79,8 +73,8 @@
       <file leaf-file-name="book.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            <state relative-caret-position="675">
+              <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -148,6 +142,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/encrypter/crypter.java" />
         <option value="$PROJECT_DIR$/src/controller/controller.java" />
+        <option value="$PROJECT_DIR$/src/models/book.java" />
+        <option value="$PROJECT_DIR$/src/models/curriculum.java" />
+        <option value="$PROJECT_DIR$/src/models/user.java" />
       </list>
     </option>
   </component>
@@ -708,12 +705,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479991869312</updated>
-      <workItem from="1479991872719" duration="2421000" />
+      <workItem from="1479991872719" duration="3235000" />
     </task>
+    <task id="LOCAL-00001" summary="ny">
+      <created>1479994809824</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1479994809824</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2421000" />
+    <option name="totallyTimeSpent" value="3235000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="0" width="980" height="1090" extended-state="0" />
@@ -759,7 +764,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="ny" />
+    <option name="LAST_COMMIT_MESSAGE" value="ny" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -786,30 +792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/user.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/curriculum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -841,10 +823,34 @@
     <entry file="file://$PROJECT_DIR$/src/controller/controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/curriculum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1375">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/user.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>

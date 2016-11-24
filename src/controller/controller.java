@@ -12,7 +12,7 @@ public class controller {
 
     public void hovedMenu (){
 
-        System.out.print("hej");
+        String username, password;
     }
 
 }
