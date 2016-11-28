@@ -1,4 +1,6 @@
 package controller;
+import sdk.connection;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -8,6 +10,7 @@ import java.util.ArrayList;
 public class controller {
 
 
+Scanner input;
     public controller(){
         Scanner input = new Scanner(System.in);
     }
@@ -20,7 +23,22 @@ public class controller {
 
         System.out.println("Velkommen til Bookit");
         System.out.println("Her er login menuen");
+        // indsæt opret bruger
+        System.out.println("Indtast dit Brugernavn");
+        username = input.nextLine();
+        System.out.println("Indtast dit password");
+        password = input.nextLine();
 
+        //Hvis brugernavn og password stemmer overens med dem i databasen
+        // så bliver man sendt videre til brugermenuen
+
+        String token = connection.authorizeLogin(username, password);
+
+        if (token !=null){
+            do {
+                System.out.println("Login menu");
+            }
+        }
     }
 
 }
