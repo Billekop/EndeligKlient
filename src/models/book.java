@@ -38,7 +38,7 @@ public class book {
             this.priceCDON = priceCDON;
         }
 
-        public int getBookID() {
+        public static int getBookID() {
             return bookID;
         }
 
@@ -54,7 +54,7 @@ public class book {
             this.publisher = publisher;
         }
 
-        public String getTitle() {
+        public static String getTitle() {
             return title;
         }
 
