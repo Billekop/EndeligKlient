@@ -37,6 +37,16 @@ Scanner input;
         if (token !=null){
             do {
                 System.out.println("Login menu");
+                System.out.println("Tryk 1. for at printe en bog");
+                switch(input.nextInt()){
+                    case 1;
+                        printBook();
+                        break;
+                    
+                }
+                else {
+                    System.out.println("Forkert brugernavn eller adgangskode");
+                }
             }
         }
     }
