@@ -6,7 +6,7 @@ package encrypter;
 public class crypter {
 
     public static String encryptDecryptXOR(String input) {
-        char[] key = {'G', 'H', 'I'}; //Dette kan være alle andre bogstaver end a,b og c.
+        char[] key = {'D', 'E', 'F'}; //Dette kan være alle andre bogstaver end a,b og c.
         StringBuilder output = new StringBuilder();
 
         //For loop der scrambler den String, der bliver indtastet

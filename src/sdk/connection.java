@@ -4,9 +4,10 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import encrypter.crypter;
 import models.book;
-
-import models.userLogin;
 import com.sun.jersey.api.client.ClientResponse;
+import models.UserLogin;
+import models.curriculum;
+
 import java.util.ArrayList;
 
 /**
@@ -16,11 +17,16 @@ import java.util.ArrayList;
 //denne klasse opretter forbindelse til serveren. Jeg har fået inspiration fra Jespers java-klient til at
     //lave denne klasse. Laver kald til serveren.
 public class connection {
-//laver et kald til serveren og tjekker i databasen under user login.
+
+
+
+
+    //laver et kald til serveren og tjekker i databasen under user login.
     public static String authorizeLogin(String username, String password) {
-        userLogin userLogin = new userLogin(username, password);
+        UserLogin userLogin = new UserLogin(username, password);
         ClientResponse clientResponse = HTTPrequest.post(null, "/user/login", new Gson().toJson(userLogin));
         String token = null;
+
 // tjekker om der kommer respons fra serveren. else: ingen forbindelse. til sidst returner den et token
         if (clientResponse == null) {
             System.out.println("Der er ingen forbindelse til serveren");
@@ -29,7 +35,7 @@ public class connection {
             if (clientResponse.getStatus() == 200) {
                 token = json;
             } else {
-                System.out.println("Der er desværre ikke adgang");
+                System.out.println("Der er desværre ikke adgang--Connection");
             }
         }
         return token;
@@ -39,7 +45,7 @@ public class connection {
 // en metode der henter alle bøger fra databasen som er gemt i arraylisten "book"
 
 public static ArrayList<book> getBooks() {
-    ClientResponse clientResponse = HTTPrequest.get("book/");
+    ClientResponse clientResponse = HTTPrequest.get("/book");
     ArrayList<book> books = null;
     //hvis  clientresponse er null:
     //inspiration fra Jespers java klient
@@ -78,5 +84,48 @@ public static ArrayList<book> getBooks() {
         }
         return book;
     }
+//
+public static ArrayList<curriculum> getCurriculums(){
+    ClientResponse clientResponse = HTTPrequest.get("curriculum/");
+    ArrayList<curriculum> curriculums = null;
+
+
+
+    if (clientResponse == null) {
+
+        System.out.println("Der er desværre ikke adgang til pensumlisterne");
+    } else {
+        String encryptedJson = clientResponse.getEntity(String.class);
+        if (clientResponse.getStatus() == 200) {
+            String decryptedJson = crypter.encryptDecryptXOR(encryptedJson);
+            curriculums = new Gson().fromJson(decryptedJson, new TypeToken<ArrayList<curriculum>>() {}.getType());
+        } else {
+            System.out.println("Der er en error på ServerSiden");
+        }
+    }
+
+    //clientResponse.close();
+    return curriculums;
 }
+//metode der skal hente bøger I de forskellige pensumlister.
+/*public static ArrayList<book> getBooksFromCurriculum(int curriculumId) {
+    ClientResponse clientResponse = HTTPrequest.get("/curriculum/");
+    ArrayList<book> books = null;
+    if (clientResponse ==) {
+        System.out.println("Der er desværre ikke adgang til serveren");
+
+} else {
+        String encryptedJson = clientResponse.getEntity(String.class);
+        if (clientResponse.getStatus() == 200) {
+            String decryptedJson = crypter.encryptDecryptXOR(encryptedJson);
+
+        }
+    }
+
+    }*/
+
+}
+
+
+
 

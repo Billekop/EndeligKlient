@@ -1,13 +1,13 @@
 package models;
 
 /**
- * Created by Ejer on 24-11-2016.
+ * Created by Ejer on 28-11-2016.
  */
-public class userLogin {
+public class UserLogin {
     private String username;
     private String password;
 
-    public userLogin(String username, String password) {
+    public UserLogin(String username, String password) {
         this.username = username;
         this.password = password;
     }
@@ -28,3 +28,4 @@ public class userLogin {
         this.password = password;
     }
 }
+

@@ -6,7 +6,7 @@ package models;
 public class book {
 
         private int bookID;
-        private double ISBN;
+        private long ISBN;
         private String publisher;
         private String title;
         private String author;
@@ -15,7 +15,7 @@ public class book {
         private double priceCDON;
         private int version;
 
-        public book(int bookID, String publisher, String title, String author, int version, double ISBN, double priceAB, double priceSAXO, double priceCDON) {
+        public book(int bookID, String publisher, String title, String author, int version, long ISBN, double priceAB, double priceSAXO, double priceCDON) {
             this.bookID = bookID;
             this.publisher = publisher;
             this.title = title;
@@ -27,7 +27,7 @@ public class book {
             this.priceCDON = priceCDON;
         }
 
-        public book(String publisher, String title, String author, int version, double ISBN, double priceAB, double priceSAXO, double priceCDON) {
+        public book(String publisher, String title, String author, int version, long ISBN, double priceAB, double priceSAXO, double priceCDON) {
             this.publisher = publisher;
             this.title = title;
             this.author = author;
@@ -38,11 +38,11 @@ public class book {
             this.priceCDON = priceCDON;
         }
 
-        public static int getBookID() {
+        public int getbookID() {
             return bookID;
         }
 
-        public void setBookID(int bookID) {
+        public void setbookID(int bookID) {
             this.bookID = bookID;
         }
 
@@ -54,7 +54,7 @@ public class book {
             this.publisher = publisher;
         }
 
-        public static String getTitle() {
+        public String getTitle() {
             return title;
         }
 
@@ -82,7 +82,7 @@ public class book {
             return ISBN;
         }
 
-        public void setISBN(double ISBN) {
+        public void setISBN(long ISBN) {
             this.ISBN = ISBN;
         }
 
