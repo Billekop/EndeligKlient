@@ -1,6 +1,7 @@
 package sdk;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 import encrypter.crypter;
 import models.book;
@@ -24,7 +25,7 @@ public class connection {
     //laver et kald til serveren og tjekker i databasen under user login.
     public static String authorizeLogin(String username, String password) {
         UserLogin userLogin = new UserLogin(username, password);
-        ClientResponse clientResponse = HTTPrequest.post(null, "/user/login", new Gson().toJson(userLogin));
+        ClientResponse clientResponse = HTTPrequest.post(null,"/user/login", crypter.encryptDecryptXOR(new Gson().toJson(userLogin)));
         String token = null;
 
 // tjekker om der kommer respons fra serveren. else: ingen forbindelse. til sidst returner den et token
@@ -107,6 +108,27 @@ public static ArrayList<curriculum> getCurriculums(){
     //clientResponse.close();
     return curriculums;
 }
+// den her klasse sender et kald til /curriculum og videre til de bøger, der
+// har et Id som hører til et bestemt curriculumID. I controller klassen bliver der bestemt, hvilket Id der skal søges efter
+public static ArrayList<book> booksFromCurriculum(int curriculumId){
+    ClientResponse clientResponse = HTTPrequest.get("/curriculum/" + curriculumId + "/books");
+    ArrayList<book> book = null;
+
+    if (clientResponse == null){
+        System.out.println("ingen forbindelse - booksFromCurriculum");
+    }else {
+        String encryptedJson = clientResponse.getEntity(String.class);
+        if (clientResponse.getStatus() == 200){
+            String decryptedJson = crypter.encryptDecryptXOR(encryptedJson);
+            book = new Gson().fromJson(decryptedJson, new TypeToken<ArrayList<book>>() {}.getType());
+        }else {
+            System.out.println("der blev ikke returneret en status 200 - booksfromCurriculum. debug for at tjekke status");
+        }
+    }
+    clientResponse.close();
+    return book;
+}
+
 //metode der skal hente bøger I de forskellige pensumlister.
 /*public static ArrayList<book> getBooksFromCurriculum(int curriculumId) {
     ClientResponse clientResponse = HTTPrequest.get("/curriculum/");
@@ -125,7 +147,10 @@ public static ArrayList<curriculum> getCurriculums(){
     }*/
 
 
-public static createUser 
+/*public static String createUser(JsonObject data)*/
+
+
+
 
 }
 

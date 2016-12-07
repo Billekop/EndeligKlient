@@ -31,7 +31,7 @@ public class HTTPrequest {
         return clientResponse;
     }
 
-    public static ClientResponse post(String token, String path, String json, String data) {
+    public static ClientResponse post(String token, String path, String json) {
         ClientResponse clientResponse = null;
         try {
             WebResource webResource = client

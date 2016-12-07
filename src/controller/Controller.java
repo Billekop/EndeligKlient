@@ -56,26 +56,15 @@ public void startMenu() {
     }
 
 
-       /* public void createUser() {
-        int valg2 = 0;
-        do {
+        public void createUser() {
             Scanner input = new Scanner(System.in);
-            try {
-                System.out.println("Indtast dit forvavn");
-                //metode
-                System.out.println("Indtast dit efternavn");
-                //metode
-                System.out.println("indtast din email");
-                //metode
-                System.out.println("Indtast dit ønskede brugernavn");
-                //metode
-                System.out.println("Indtast dit ønskede Password");
-            }
-        }
+            System.out.println("Du har valgt opret bruger");
+
+
     }
 
 
-    } while (true);*/
+
 
 
     public void hovedMenu(){
