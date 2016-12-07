@@ -31,13 +31,13 @@ public class HTTPrequest {
         return clientResponse;
     }
 
-    public static ClientResponse post(String token, String path, String json) {
+    public static ClientResponse post(String token, String path, String json, String data) {
         ClientResponse clientResponse = null;
         try {
             WebResource webResource = client
                     .resource("http://localhost:8080/server2_0_war_exploded")
 
-                    .path(path); //bog
+                    .path(path);
 
             clientResponse = webResource.accept("application/json").post(ClientResponse.class, json);
 
@@ -50,7 +50,8 @@ public class HTTPrequest {
 //put request er put istedet for POST.
     // denne metode er egentlig den samme som POST metoden.. Det laver bare et put kald istedet.
 
-public static ClientResponse put(String token, String path, String json) {
+// hmm, gad vide om jeg overhovedet skal bruge denne klasse.
+    public static ClientResponse put(String token, String path, String json) {
     ClientResponse clientResponse = null;
     try {
         WebResource webResource = client

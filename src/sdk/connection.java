@@ -124,6 +124,9 @@ public static ArrayList<curriculum> getCurriculums(){
 
     }*/
 
+
+public static createUser 
+
 }
 
 
