@@ -3,6 +3,7 @@ package controller;
 
  //Created by Ejer on 28-11-2016.
 
+import com.google.gson.JsonObject;
 import models.book;
 import sdk.connection;
 import com.google.gson.Gson;
@@ -55,13 +56,22 @@ public void startMenu() {
     }while (true) ;
     }
 
-
-        public void createUser() {
+    //http://stackoverflow.com/questions/19616972/how-to-add-an-object-to-an-arraylist-in-java
+       /* public void createUser() {
+            JsonObject data = new JsonObject();
             Scanner input = new Scanner(System.in);
             System.out.println("Du har valgt opret bruger");
 
+            System.out.println("indtast dit Fornavn: ");
+            data.addProperty("firstName", input.nextLine());
 
-    }
+            System.out.println("indtast dit Efternavn");
+            data.addProperty("lastName", input.nextLine());
+
+            connection.createUser(data);
+
+
+    }*/
 
 
 
@@ -98,7 +108,7 @@ public void startMenu() {
                             printBooks();
                             break;
                         case 2:
-                            printCurriculums();
+                           printCurriculums();
                             //vis pensumliste(r)
                             break;
 
@@ -141,16 +151,24 @@ public void startMenu() {
 
     // Den her klasse udskriver pensumlister
     // den referere til getBook klassen
-public void printCurriculums(){
-    Scanner chooseCurriculum = new Scanner (System.in);
+public void printCurriculums() {
+    Scanner chooseCurriculum = new Scanner(System.in);
     ArrayList<curriculum> curriculums = connection.getCurriculums();
     ArrayList<curriculum> onecurriculum = new ArrayList<>();
     System.out.println("Her er alle pensumlister");
-    for  (curriculum curriculum : curriculums){
-        System.out.println("Id: " + curriculum.getCurriculumID() + " | " + curriculum.getSchool() + " - " + curriculum.getSemester() + " på semester " + curriculum.getEducation() );
+    for (curriculum curriculum : curriculums) {
+        System.out.println("Id: " + curriculum.getCurriculumID() + " | " + curriculum.getSchool() + " - " + curriculum.getSemester() + " på semester " + curriculum.getEducation());
     }
+
         System.out.println("vælg det pensum, du vil have vist bøgerne fra");
         int curriculumsID = chooseCurriculum.nextInt();
+
+        ArrayList<book> fromCurriculum = connection.booksFromCurriculum(curriculumsID);
+        System.out.println("Dit valgte semester har følgende bøger");
+
+    for (book book : fromCurriculum) {
+        System.out.println(book.getTitle());
+    }
     try{
         for (curriculum curriculum : curriculums ){
             if(curriculum.getCurriculumID() == curriculumsID){
