@@ -43,7 +43,7 @@ public void startMenu() {
                     hovedMenu();
                     break;
                 case 2:
-                    //opret bruger
+                    createUser();
                     break;
                 default:
                     System.out.println("benyt venligst ovenstående muligheder");
@@ -57,21 +57,40 @@ public void startMenu() {
     }
 
     //http://stackoverflow.com/questions/19616972/how-to-add-an-object-to-an-arraylist-in-java
-       /* public void createUser() {
-            JsonObject data = new JsonObject();
+        public void createUser() {
+            JsonObject newUser = new JsonObject();
             Scanner input = new Scanner(System.in);
+            //String FirstName, LastName, email, UserName, Password;
+
             System.out.println("Du har valgt opret bruger");
 
             System.out.println("indtast dit Fornavn: ");
-            data.addProperty("firstName", input.nextLine());
+            newUser.addProperty("First_Name", input.nextLine());
+            //FirstName = input.nextLine();
 
             System.out.println("indtast dit Efternavn");
-            data.addProperty("lastName", input.nextLine());
+            newUser.addProperty("Last_Name", input.nextLine());
+            //LastName = input.nextLine();
 
-            connection.createUser(data);
+            System.out.println("indtast dit ønskede brugernavn");
+            newUser.addProperty("Username", input.nextLine());
+            //email = input.nextLine();
+
+            System.out.println("indtast din Email");
+            newUser.addProperty("Email", input.nextLine());
+            //UserName = input.nextLine();
+
+            System.out.println("indtast dit ønskede password");
+            newUser.addProperty("Password", input.nextLine());
+            //Password = input.nextLine();
 
 
-    }*/
+            newUser.addProperty("Usertype", "0");
+            connection.createUser(newUser);
+
+
+
+    }
 
 
 

@@ -3,7 +3,7 @@ package encrypter;
 /**
  * Created by Ejer on 24-11-2016.
  */
-public class crypter {
+public class Crypter {
 
     public static String encryptDecryptXOR(String input) {
         char[] key = {'D', 'E', 'F'}; //Dette kan være alle andre bogstaver end a,b og c.

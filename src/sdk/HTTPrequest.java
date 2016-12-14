@@ -32,7 +32,7 @@ public class HTTPrequest {
         return clientResponse;
     }
 
-    public static ClientResponse post(String token, String path, String json) {
+    public static ClientResponse post( String path, String json) {
         ClientResponse clientResponse = null;
         try {
             WebResource webResource = client
@@ -47,26 +47,27 @@ public class HTTPrequest {
         }
         return clientResponse;
     }
-}
+
 
 //put request er put istedet for POST.
     // denne metode er egentlig den samme som POST metoden.. Det laver bare et put kald istedet.
 
-// hmm, gad vide om jeg overhovedet skal bruge denne klasse.
-   /*public static ClientResponse put(String token, String path, String json) {
-    ClientResponse clientResponse = null;
-    try {
-        WebResource webResource = client
-                .resource("http://localhost:8080/server2_0_war_exploded")
-                .path(path);
+    // hmm, gad vide om jeg overhovedet skal bruge denne klasse.
+    public static ClientResponse put(String path, String json) {
+        ClientResponse clientResponse = null;
+        try {
+            WebResource webResource = client
+                    .resource("http://localhost:8080/server2_0_war_exploded")
+                    .path(path);
 
-        clientResponse = webResource.accept("application/json").put(ClientResponse.class, json);
+            clientResponse = webResource.accept("application/json").put(ClientResponse.class, json);
 
-    } catch (UniformInterfaceException | ClientHandlerException e ) {
-        e.printStackTrace();
+        } catch (UniformInterfaceException | ClientHandlerException e) {
+            e.printStackTrace();
 
-    }
+        }
         return clientResponse;
-}*/
+    }
+}
 
 
