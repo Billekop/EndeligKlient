@@ -6,7 +6,7 @@ package models;
 public class UserLogin {
     private String username;
     private String password;
-
+//getters og setters til brugerlogin
     public UserLogin(String username, String password) {
         this.username = username;
         this.password = password;

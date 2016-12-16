@@ -54,6 +54,7 @@ public class Controller {
     }
 
     //http://stackoverflow.com/questions/19616972/how-to-add-an-object-to-an-arraylist-in-java
+    //opret brugermetode. modtager input, som newUser og sender den videre til createUser metoden i connection klassen
     public void createUser() {
         JsonObject newUser = new JsonObject();
         Scanner input = new Scanner(System.in);
@@ -89,7 +90,7 @@ public class Controller {
 
     }
 
-
+// hovedmenu, som tager input som username og password, og fører det hen i authorizeLogin metoden i connection klassen.
     public void hovedMenu() {
         Scanner input = new Scanner(System.in);
         String username;
@@ -103,6 +104,7 @@ public class Controller {
 
         //tager input fra ovenstående og fører det videre til connection mappen, ind i authorizeLogin klassen som username og password.
         String token = connection.authorizeLogin(username, password);
+        //Derefter bliver kører en do try, som indeholder en switch, til at tilgå forskellige metoder.
         if (token != null) {
             do {
                 try {
@@ -128,13 +130,13 @@ public class Controller {
                             break;
 
                         case 4:
-                            //updateUser;
+                            //updateUser();
                             //opdater en bruger
                             break;
 
                         case 5:
-                            //deleteUser;
-                            //slet en bruger
+                            //deleteUser();
+
                             break;
 
                         case 6:
@@ -154,7 +156,8 @@ public class Controller {
         }
     }
 
-    //Her er klassen til printBooks. Den printer alle bøger
+    //Her er klassen til printBooks. Den printer alle bøger, med bookID og titel.
+    //bruger ArrayList book til at hente bøger.
     public void printBooks() {
         ArrayList<book> books = connection.getBooks();
         System.out.println("Her er alle bøger");
@@ -165,6 +168,7 @@ public class Controller {
 
     // Den her klasse udskriver pensumlister
     // den referere til getBook klassen
+    //bruger ArrayList curriculum, tilføjer informationen til en ny Arraylist og printer alle pensumlister
     public void printCurriculums() {
         Scanner chooseCurriculum = new Scanner(System.in);
         ArrayList<curriculum> curriculums = connection.getCurriculums();
@@ -173,7 +177,7 @@ public class Controller {
         for (curriculum curriculum : curriculums) {
             System.out.println("Id: " + curriculum.getCurriculumID() + " | " + curriculum.getSchool() + " - " + curriculum.getSemester() + " på semester " + curriculum.getEducation());
         }
-
+        //nextInt til at give brugeren mulighed for at vælge et pensumID
         System.out.println("vælg det pensum, du vil have vist bøgerne fra");
         int curriculumsID = chooseCurriculum.nextInt();
 
@@ -185,6 +189,7 @@ public class Controller {
         }
         try {
             for (curriculum curriculum : curriculums) {
+                //sætter input lig med pensum ID og printer bøger til tilhørende pensumID
                 if (curriculum.getCurriculumID() == curriculumsID) {
                     onecurriculum.add(curriculum);
                     System.out.println(onecurriculum.indexOf(curriculums) + curriculum.getCurriculumID() + curriculum.getEducation());
@@ -200,7 +205,7 @@ public class Controller {
     // denne metode leder efter et id på én bog og printer den.
     public void printBook() {
 
-
+        //printer først en enkelt bog.
         Scanner valg = new Scanner(System.in);
         ArrayList<book> books = connection.getBooks();
         //Bøgerne bliver lagt ind i en ny ArrayList, hvor brugeren, ved hjælp af input kan printe 1 bog
@@ -211,9 +216,10 @@ public class Controller {
 
         System.out.println("Indtast ID på den bog, du ønsker priser på");
         int BookID = valg.nextInt();
-
+        //nextInt til at give brugeren muligheden for at indtaste et ID på ønskede bog.
         try {
             for (book book : books) {
+                //sætter input lig med bookID og printer information på valgte bookID
                 if (book.getbookID() == BookID) {
                     oneBook.add(book);
                     System.out.println(oneBook.indexOf(book) + " BookID: " + book.getbookID() + " Titel: " + book.getTitle() + " Version: " + book.getVersion() + " Forfatter: " + book.getAuthor() + ":\n Pris fra PriceAB "

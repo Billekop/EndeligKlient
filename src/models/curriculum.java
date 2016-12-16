@@ -6,7 +6,7 @@ package models;
 public class curriculum {
     String school, education;
     int semester, curriculumID;
-
+//til at hente pensumlister og gemme dem, fra databasen
     public curriculum(){
 
     }
@@ -22,7 +22,7 @@ public class curriculum {
         this.education = education;
         this.semester = semester;
     }
-
+//getters og setters
     public String getSchool() {
         return school;
     }

@@ -23,7 +23,6 @@ public class connection {
     //laver et kald til serveren og tjekker i databasen under user login.
     public static String authorizeLogin(String username, String password) {
         UserLogin userLogin = new UserLogin(username,password);
-        //String cryptedJson = Crypter.encryptDecryptXOR(new Gson().toJson(userLogin));
         ClientResponse clientResponse = HTTPrequest.post("/user/login", new Gson().toJson(userLogin));
         String token = null;
 
@@ -41,11 +40,12 @@ public class connection {
 
         return token;
     }
-
+// denne metode skal bruges til at oprette en ny bruger. Den er dog ikke funktionel.
+    //bruger post og en HTTP requst til at ramma /user endpointed på serveren.
     public static String createUser(JsonObject newUser) {
         ClientResponse clientResponse = HTTPrequest.post("/user", Crypter.encryptDecryptXOR( new Gson().toJson(newUser)));
         String serverResponse = null;
-
+//hvis der er forbindelse til serveren, og at serveren returnerer en status 200, så bliver serverResponse returneret.
         if (clientResponse == null) {
             System.out.println("ingen adgang");
         } else {
@@ -67,6 +67,8 @@ public class connection {
 
 
 // en metode der henter alle bøger fra databasen som er gemt i arraylisten "book"
+    // hvis server returnerer en status 200, så bliver informationen gjort læseligt, ved hjælp af Gson().fromJson
+    //information bliver også dekrypteret.
 
     public static ArrayList<book> getBooks() {
         ClientResponse clientResponse = HTTPrequest.get("/book");
@@ -92,7 +94,8 @@ public class connection {
 
 
 
-    //
+    //rammer curriculum/ path, ved hjælp at et HTTP request get.
+    // lignende ovenstående metode
     public static ArrayList<curriculum> getCurriculums() {
         ClientResponse clientResponse = HTTPrequest.get("curriculum/");
         ArrayList<curriculum> curriculums = null;
@@ -116,7 +119,7 @@ public class connection {
         return curriculums;
     }
 
-
+//til at hente bøger fra bestemt pensumliste. rammer /curriculum path samt /books path
     public static ArrayList<book> booksFromCurriculum(int curriculumId) {
         ClientResponse clientResponse = HTTPrequest.get("/curriculum/" + curriculumId + "/books");
         ArrayList<book> book = null;

@@ -8,6 +8,7 @@ import java.io.FileReader;
 /**
  * Created by Ejer on 24-11-2016.
  */
+// til at få adgang til serverUrl
 public class config {
     private static String serverUrl;
 

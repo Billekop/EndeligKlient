@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="297ff2de-212f-40c8-afa0-5f3181328305" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KlientenEndelig/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/KlientenEndelig/controller/Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KlientenEndelig/sdk/HTTPrequest.class" afterPath="$PROJECT_DIR$/out/production/KlientenEndelig/sdk/HTTPrequest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KlientenEndelig/sdk/connection$1.class" afterPath="$PROJECT_DIR$/out/production/KlientenEndelig/sdk/connection$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KlientenEndelig/sdk/connection$2.class" afterPath="$PROJECT_DIR$/out/production/KlientenEndelig/sdk/connection$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KlientenEndelig/sdk/connection.class" afterPath="$PROJECT_DIR$/out/production/KlientenEndelig/sdk/connection.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/Controller.java" afterPath="$PROJECT_DIR$/src/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/encrypter/Crypter.java" afterPath="$PROJECT_DIR$/src/encrypter/Crypter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/UserLogin.java" afterPath="$PROJECT_DIR$/src/models/UserLogin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/book.java" afterPath="$PROJECT_DIR$/src/models/book.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/curriculum.java" afterPath="$PROJECT_DIR$/src/models/curriculum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/user.java" afterPath="$PROJECT_DIR$/src/models/user.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sdk/HTTPrequest.java" afterPath="$PROJECT_DIR$/src/sdk/HTTPrequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sdk/config.java" afterPath="$PROJECT_DIR$/src/sdk/config.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sdk/config.json" afterPath="$PROJECT_DIR$/src/sdk/config.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sdk/connection.java" afterPath="$PROJECT_DIR$/src/sdk/connection.java" />
     </list>
     <list id="4758ee23-f3ed-4f89-a611-f2a2c2a90119" name="Failed commit: Default" comment="nyeste" />
@@ -33,11 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="connection.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="connection.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sdk/connection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2827">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="-501">
+              <caret line="121" column="86" selection-start-line="121" selection-start-column="86" selection-end-line="121" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,41 +51,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="decrypter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/encrypter/decrypter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="book.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="book.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="225">
+              <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Crypter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/encrypter/Crypter.java">
+      <file leaf-file-name="curriculum.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/curriculum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+            <state relative-caret-position="250">
+              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Digester.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/encrypter/Digester.java">
+      <file leaf-file-name="user.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/user.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-350">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="50">
+              <caret line="13" column="107" selection-start-line="13" selection-start-column="107" selection-end-line="13" selection-end-column="107" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserLogin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/UserLogin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -88,8 +94,8 @@
       <file leaf-file-name="HTTPrequest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sdk/HTTPrequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="91" column="7" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="7" />
+            <state relative-caret-position="299">
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,18 +106,18 @@
       <file leaf-file-name="mainClass.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="175">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
+      <file leaf-file-name="Digester.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/encrypter/Digester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+            <state relative-caret-position="25">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -120,11 +126,11 @@
       <file leaf-file-name="config.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sdk/config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+            <state relative-caret-position="50">
+              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
               <folding>
-                <element signature="e#690#691#0" expanded="true" />
-                <element signature="e#734#735#0" expanded="true" />
+                <element signature="e#724#725#0" expanded="true" />
+                <element signature="e#768#769#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,8 +139,8 @@
       <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sdk/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            <state relative-caret-position="50">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -163,25 +169,25 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/models/curriculum.java" />
         <option value="$PROJECT_DIR$/src/encrypter/digester.java" />
         <option value="$PROJECT_DIR$/src/encrypter/Digester.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/controller/controller.java" />
         <option value="$PROJECT_DIR$/src/models/userLogin.java" />
-        <option value="$PROJECT_DIR$/src/models/UserLogin.java" />
-        <option value="$PROJECT_DIR$/src/models/user.java" />
-        <option value="$PROJECT_DIR$/src/sdk/config.java" />
-        <option value="$PROJECT_DIR$/src/sdk/config.json" />
         <option value="$PROJECT_DIR$/KlientenSeneste.iml" />
         <option value="$PROJECT_DIR$/src/mainClass.java" />
-        <option value="$PROJECT_DIR$/src/models/book.java" />
         <option value="$PROJECT_DIR$/src/encrypter/decrypter.java" />
         <option value="$PROJECT_DIR$/src/encrypter/crypter.java" />
-        <option value="$PROJECT_DIR$/src/sdk/connection.java" />
         <option value="$PROJECT_DIR$/src/encrypter/Crypter.java" />
-        <option value="$PROJECT_DIR$/src/sdk/HTTPrequest.java" />
         <option value="$PROJECT_DIR$/src/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/models/book.java" />
+        <option value="$PROJECT_DIR$/src/models/curriculum.java" />
+        <option value="$PROJECT_DIR$/src/models/user.java" />
+        <option value="$PROJECT_DIR$/src/models/UserLogin.java" />
+        <option value="$PROJECT_DIR$/src/sdk/config.java" />
+        <option value="$PROJECT_DIR$/src/sdk/config.json" />
+        <option value="$PROJECT_DIR$/src/sdk/connection.java" />
+        <option value="$PROJECT_DIR$/src/sdk/HTTPrequest.java" />
       </list>
     </option>
   </component>
@@ -251,7 +257,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -362,8 +368,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -851,7 +857,8 @@
       <workItem from="1481106415929" duration="6450000" />
       <workItem from="1481303736634" duration="442000" />
       <workItem from="1481543621259" duration="17025000" />
-      <workItem from="1481560955339" duration="15824000" />
+      <workItem from="1481560955339" duration="17671000" />
+      <workItem from="1481803112596" duration="6876000" />
     </task>
     <task id="LOCAL-00001" summary="ny">
       <created>1479994809824</created>
@@ -965,11 +972,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481733312772</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Mislykkedes metoder fjernet. andre småting fjernet. programmet kan:&#10;- login, uden kryptering og hashing: (grundet status 500)&#10;- printe alle bøger.&#10;- printe alle pensumlister.&#10;- printe bøger i valgt pensumliste.&#10;- printe information på valgt bog.&#10;">
+      <created>1481800351802</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1481800351815</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112643000" />
+    <option name="totallyTimeSpent" value="121366000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1102" extended-state="6" />
@@ -983,24 +997,24 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.50215983" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28079912" sideWeight="0.44762418" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21198668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28079912" sideWeight="0.44762418" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27302995" sideWeight="0.49784017" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11555076" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5172031" sideWeight="0.49784017" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46059933" sideWeight="0.48434126" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1154273" sideWeight="0.48434126" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5172031" sideWeight="0.49784017" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1025,11 +1039,12 @@
     <MESSAGE value="Forsøg på at lave en createUser klasse - controller klasse" />
     <MESSAGE value="YEHA!! Internal server error status 500 elimineret!! &#10;Hvad kan klienten nu:&#10;- Logge ind&#10;- Printe alle bøger&#10;- få vist 3 priser på en valgt bog&#10;- printe alle pensummer&#10;- vise bøger i det valgte pensum" />
     <MESSAGE value="Har forsøgt at tilføje en Token til login, men serveren returnerer en status 500" />
-    <option name="LAST_COMMIT_MESSAGE" value="Har forsøgt at tilføje en Token til login, men serveren returnerer en status 500" />
+    <MESSAGE value="Mislykkedes metoder fjernet. andre småting fjernet. programmet kan:&#10;- login, uden kryptering og hashing: (grundet status 500)&#10;- printe alle bøger.&#10;- printe alle pensumlister.&#10;- printe bøger i valgt pensumliste.&#10;- printe information på valgt bog.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mislykkedes metoder fjernet. andre småting fjernet. programmet kan:&#10;- login, uden kryptering og hashing: (grundet status 500)&#10;- printe alle bøger.&#10;- printe alle pensumlister.&#10;- printe bøger i valgt pensumliste.&#10;- printe information på valgt bog.&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="39" />
+      <option name="time" value="40" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1038,25 +1053,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/models/curriculum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="58" column="6" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KlientenSeneste.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1075,8 +1078,8 @@
         <state relative-caret-position="200">
           <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
           <folding>
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1132,7 +1135,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1147,7 +1152,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1156,8 +1163,8 @@
         <state relative-caret-position="750">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1326,97 +1333,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="360" column="25" selection-start-line="360" selection-start-column="25" selection-end-line="360" selection-end-column="25" />
-          <folding>
-            <element signature="e#14420#14421#0" expanded="true" />
-            <element signature="e#14482#14483#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/curriculum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-625">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/user.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-627">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/UserLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sdk/config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
-          <folding>
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sdk/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sdk/connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2827">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sdk/HTTPrequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="91" column="7" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/encrypter/Crypter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1428,9 +1344,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="uml://Flash/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Flash</ID>
+          <OriginalElement />
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="819.0" y="224.5" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>PRIVATE</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">com</node>
+            <node x="" y="">models</node>
+            <node x="" y="">encrypter</node>
+            <node x="" y="">controller</node>
+            <node x="" y="">netscape</node>
+            <node x="" y="">oracle</node>
+            <node x="" y="">mainClass</node>
+            <node x="" y="">org</node>
+            <node x="" y="">xsd</node>
+            <node x="" y="">sun</node>
+            <node x="" y="">JDOMAbout.Author</node>
+            <node x="" y="">META-INF</node>
+            <node x="" y="">jdk</node>
+            <node x="" y="">JDOMAbout.Info</node>
+            <node x="" y="">java</node>
+            <node x="" y="">javax</node>
+            <node x="" y="">sdk</node>
+            <node x="" y="">javafx</node>
+            <node x="" y="">JDOMAbout</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.9192245557350566" x="302.9683655536028" y="479.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="221" column="85" selection-start-line="221" selection-start-column="85" selection-end-line="221" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/encrypter/Crypter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/encrypter/Digester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-350">
+        <state relative-caret-position="25">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
@@ -1438,9 +1426,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="225">
+          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/curriculum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/user.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="13" column="107" selection-start-line="13" selection-start-column="107" selection-end-line="13" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/UserLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sdk/config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding>
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sdk/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sdk/HTTPrequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sdk/connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-501">
+          <caret line="121" column="86" selection-start-line="121" selection-start-column="86" selection-end-line="121" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -11,7 +11,7 @@ public class user {
     String email;
     String password;
     Boolean userType;
-
+//til at hente brugerinformation og gemme dem, fra database. Kan også blive brugt til at set ny information
     public user(String firstName, String lastName, String userName, String email, String password, boolean userType){
         this.firstName = firstName;
         this.lastName = lastName;

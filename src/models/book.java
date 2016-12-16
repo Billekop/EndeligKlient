@@ -4,7 +4,7 @@ package models;
  * Created by Ejer on 24-11-2016.
  */
 public class book {
-
+//til at hente bøger og gemme dem fra databasen.
         private int bookID;
         private long ISBN;
         private String publisher;
@@ -37,7 +37,7 @@ public class book {
             this.priceSAXO = priceSAXO;
             this.priceCDON = priceCDON;
         }
-
+//getters og setters
         public int getbookID() {
             return bookID;
         }

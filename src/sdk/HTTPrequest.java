@@ -21,7 +21,7 @@ public class HTTPrequest {
      * @param path the specific path
      * @return
      */
-
+//get metode. bruges til at hente bøger og pensunlister
     public static ClientResponse get(String path) {
 
         ClientResponse clientResponse = null;
@@ -29,7 +29,7 @@ public class HTTPrequest {
             WebResource webResource = client
                     .resource("http://localhost:8080/server2_0_war_exploded/")
 
-                    .path(path); //bog
+                    .path(path); //book
 
             clientResponse = webResource.accept("application/json").get(ClientResponse.class);
         } catch (UniformInterfaceException | ClientHandlerException e) {
@@ -37,7 +37,7 @@ public class HTTPrequest {
         }
         return clientResponse;
     }
-
+//bruges til login.
     public static ClientResponse post(String path, String json) {
         ClientResponse clientResponse = null;
         try {
@@ -55,41 +55,8 @@ public class HTTPrequest {
     }
 
 
-//put request er put istedet for POST.
-    // denne metode er egentlig den samme som POST metoden.. Det laver bare et put kald istedet.
 
 
-    public static ClientResponse put(String path, String json, ArrayList<String> header) {
-        ClientResponse clientResponse = null;
-        try {
-            WebResource webResource = client
-                    .resource("http://localhost:8080/server2_0_war_exploded")
-                    .path(path);
-
-            clientResponse = webResource.accept("application/json").header(header.get(0), header.get(1)).put(ClientResponse.class, json);
-            System.out.println(header.get(0) + " " + header.get(1));
-        } catch (UniformInterfaceException | ClientHandlerException e) {
-            e.printStackTrace();
-
-        }
-        return clientResponse;
-    }
-
-
-  /*  public static ClientResponse logout(String path, String json) {
-        ClientResponse clientResponse = null;
-        try {
-            WebResource webResource = client
-
-                    .resource("http://localhost:8080/server2_0_war_exploded")
-                    .path(path);
-
-            clientResponse = webResource.accept("application/json").post(ClientResponse.class, json);
-        } catch (UniformInterfaceException | ClientHandlerException e) {
-            e.printStackTrace();
-        }
-        return clientResponse;
-    }*/
 }
 
 
