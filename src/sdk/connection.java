@@ -20,10 +20,10 @@ import java.util.ArrayList;
 public class connection {
 
 
-    //laver et kald til serveren og tjekker i databasen under user login.
+    //laver et kald til serveren og tjekker i databasen under User login.
     public static String authorizeLogin(String username, String password) {
         UserLogin userLogin = new UserLogin(username,password);
-        ClientResponse clientResponse = HTTPrequest.post("/user/login", new Gson().toJson(userLogin));
+        ClientResponse clientResponse = HTTPrequest.post("/User/login", new Gson().toJson(userLogin));
         String token = null;
 
 // tjekker om der kommer respons fra serveren. else: ingen forbindelse. til sidst returner den et token
@@ -41,9 +41,9 @@ public class connection {
         return token;
     }
 // denne metode skal bruges til at oprette en ny bruger. Den er dog ikke funktionel.
-    //bruger post og en HTTP requst til at ramma /user endpointed på serveren.
-    public static String createUser(JsonObject newUser) {
-        ClientResponse clientResponse = HTTPrequest.post("/user", Crypter.encryptDecryptXOR( new Gson().toJson(newUser)));
+    //bruger post og en HTTP requst til at ramma /User endpointed på serveren.
+    public static String createUser(User newUser) {
+        ClientResponse clientResponse = HTTPrequest.post("/User/create",  new Gson().toJson(newUser));
         String serverResponse = null;
 //hvis der er forbindelse til serveren, og at serveren returnerer en status 200, så bliver serverResponse returneret.
         if (clientResponse == null) {
@@ -53,13 +53,9 @@ public class connection {
             if (clientResponse.getStatus() == 200) {
                 System.out.println(serverResponse);
                 //serverResponse=response;
-
-
             } else {
                 System.out.println("Det er ikke muligt at oprette en ny bruger -- createUser");
             }
-
-
         }
         clientResponse.close();
         return serverResponse;
@@ -139,11 +135,54 @@ public class connection {
         clientResponse.close();
         return book;
     }
+    /**
+     *
+     * @param token
+     * @return
+     */
+  /* public static User getUserBasedOnToken(String token) {
+        ClientResponse clientResponse = HTTPrequest.post("/user/getuser", token);
+        User userJson = null;
 
-
-
-
+        if (clientResponse == null) {
+            System.out.println("Bruger ikke fundet");
+        } else {
+            System.out.println("===>"+clientResponse);
+            if (clientResponse.getStatus() == 200) {
+                userJson = clientResponse.getEntity(User.class);
+            } else {
+                System.out.println("returnerede ikke en status 200");
+            }
+        }
+        clientResponse.close();
+        return userJson;
+    }*/
+    /**
+     * Updating User.
+     *
+     * @param userId
+     * @param argUpdatedUser
+     * @return
+     */
+    public static String updateUser(int userId, User argUpdatedUser){
+        ClientResponse clientResponse = HTTPrequest.post("/updateuser/"+userId, Crypter.encryptDecryptXOR( new Gson().toJson(argUpdatedUser)));
+        String serverResponse = null;
+        //hvis der er forbindelse til serveren, og at serveren returnerer en status 200, så bliver serverResponse returneret.
+        if (clientResponse == null) {
+            System.out.println("ingen adgang");
+        } else {
+            serverResponse = clientResponse.getEntity(String.class);
+            if (clientResponse.getStatus() == 200) {
+                System.out.println(serverResponse);
+            } else {
+                System.out.println("Det er ikke muligt at oprette en ny bruger -- updateUser");
+            }
+        }
+        clientResponse.close();
+        return serverResponse;
     }
+
+}
 
 
 

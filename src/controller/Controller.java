@@ -3,8 +3,12 @@ package controller;
 
  //Created by Ejer on 28-11-2016.
 
+import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
+import encrypter.Digester;
+import models.User;
+import models.UserLogin;
 import models.book;
 import sdk.connection;
 import models.curriculum;
@@ -17,6 +21,8 @@ public class Controller {
 
 
     Scanner input;
+    //loggedinusertoken er ny
+    public static String loggedInUserToken = "";
 
     public Controller() {
         input = new Scanner(System.in);
@@ -24,15 +30,12 @@ public class Controller {
 
 
     public void startMenu() {
-
         int valg = 0;
         do {
             try {
                 System.out.println("Velkommen til bookit");
                 System.out.println(" 1. Log ind som eksisterende bruger");
                 System.out.println(" 2. Opret en ny bruger");
-
-
                 valg = input.nextInt();
 
                 switch (valg) {
@@ -56,41 +59,47 @@ public class Controller {
     //http://stackoverflow.com/questions/19616972/how-to-add-an-object-to-an-arraylist-in-java
     //opret brugermetode. modtager input, som newUser og sender den videre til createUser metoden i connection klassen
     public void createUser() {
-        JsonObject newUser = new JsonObject();
+        // JsonObject newUser = new JsonObject(); dette er udkommenteret. var der før
+        User newUser = new User();
         Scanner input = new Scanner(System.in);
 
 
         System.out.println("Du har valgt opret bruger");
 
         System.out.println("indtast dit Fornavn: ");
-        newUser.addProperty("First_Name", input.nextLine());
+        newUser.setFirstName(input.nextLine());
+        //newUser.addProperty("First_Name", input.nextLine()); udkommenteret. ligesom resten. var der før
 
 
         System.out.println("indtast dit Efternavn");
-        newUser.addProperty("Last_Name", input.nextLine());
+        newUser.setLastName(input.nextLine());
+        // newUser.addProperty("Last_Name", input.nextLine());
 
 
         System.out.println("indtast dit ønskede brugernavn");
-        newUser.addProperty("Username", input.nextLine());
+        newUser.setUsername(input.nextLine());
+        //newUser.addProperty("Username", input.nextLine());
 
 
         System.out.println("indtast din Email");
-        newUser.addProperty("Email", input.nextLine());
+        newUser.setEmail(input.nextLine());
+        //newUser.addProperty("Email", input.nextLine());
 
 
         System.out.println("indtast dit ønskede password");
-        newUser.addProperty("Password", input.nextLine());
+        newUser.setPassword(input.nextLine());
+        //newUser.addProperty("Password", input.nextLine());
 
+        newUser.setUserType(false);
+        // newUser.addProperty("Usertype", "0");
 
-
-        newUser.addProperty("Usertype", "0");
         //her tager den ovenstående information, og sender den videre til connection mappen, og ind i createUser metoden som newUser.
-        connection.createUser(newUser);
+        connection.createUser(newUser); //der kan være fejl her.
 
 
     }
 
-// hovedmenu, som tager input som username og password, og fører det hen i authorizeLogin metoden i connection klassen.
+    // hovedmenu, som tager input som username og password, og fører det hen i authorizeLogin metoden i connection klassen.
     public void hovedMenu() {
         Scanner input = new Scanner(System.in);
         String username;
@@ -130,7 +139,7 @@ public class Controller {
                             break;
 
                         case 4:
-                            //updateUser();
+                            updateUser(); //ny
                             //opdater en bruger
                             break;
 
@@ -235,6 +244,65 @@ public class Controller {
         }
 
 
+    }
+
+    public void updateUser() { //ny
+        User user = null;
+        User updatedUser = new User("", "", "", "", "", false);
+        Scanner input = new Scanner(System.in);
+        System.out.println(this.loggedInUserToken);
+        if (!this.loggedInUserToken.equals("")) {
+            //user = connection.getUserBasedOnToken(this.loggedInUserToken);
+        } else {
+            System.out.println("Du skal logge ind først");
+        }
+        System.out.println(",Fornavn: " + user.getFirstName() + ",Efternavn:" + user.getLastName() + ",Brugernavn:" + user.getUsername() + ",Email:" + user.getEmail());
+        updatedUser = updateUserMenu(updatedUser);
+        System.out.println(new Gson().toJson(updatedUser));
+        //connection.updateUser(user.getUserID(), updatedUser);
+    }  // til her
+
+
+    private User updateUserMenu(User newUser) { //ny
+        int choice = -1;
+        System.out.println("Update menu");
+        System.out.println("Tryk 1. for at Fornavn");
+        System.out.println("Tryk 2. for at Efternavn");
+        System.out.println("Tryk 3. for at Brugernavn");
+        System.out.println("Tryk 4. for at Email");
+        System.out.println("Tryk 5. for at Password");
+        System.out.println("Tryk 6. exit menu");
+        do {
+            try {
+                choice = input.nextInt();
+                switch (choice) {
+                    case 1:
+                        System.out.println("New Fornavn: ");
+                        break;
+                    case 2:
+                        System.out.println("New Efternavn: ");
+                        break;
+                    case 3:
+                        System.out.println("New Brugernavn: ");
+                        break;
+                    case 4:
+                        System.out.println("New Email: ");
+                        break;
+                    case 5:
+                        System.out.println("New Password: ");
+                        break;
+                    case 6:
+                        return newUser;
+                }
+            } catch (InputMismatchException e) {
+                String inp = input.nextLine();
+                if (choice == 1) newUser.setFirstName(inp);
+                if (choice == 2) newUser.setLastName(inp);
+                if (choice == 3) newUser.setUsername(inp);
+                if (choice == 4) newUser.setEmail(inp);
+                if (choice == 5) newUser.setPassword(inp);
+            }
+        } while (true);
 
     }
 }

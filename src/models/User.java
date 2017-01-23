@@ -1,9 +1,14 @@
 package models;
 
+import javax.ws.rs.Produces;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * Created by Ejer on 24-11-2016.
  */
-public class user {
+@Produces("application/json")
+@XmlRootElement
+public class User {
     int userID;
     String firstName;
     String lastName;
@@ -11,8 +16,10 @@ public class user {
     String email;
     String password;
     Boolean userType;
+    public User(){}
+
 //til at hente brugerinformation og gemme dem, fra database. Kan også blive brugt til at set ny information
-    public user(String firstName, String lastName, String userName, String email, String password, boolean userType){
+    public User(String firstName, String lastName, String userName, String email, String password, boolean userType){
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
@@ -21,7 +28,7 @@ public class user {
         this.userType = userType;
     }
 
-    public user(int userID, String firstName, String lastName, String userName, String email, String password, Boolean userType) {
+    public User(int userID, String firstName, String lastName, String userName, String email, String password, Boolean userType) {
         this.userID = userID;
         this.firstName = firstName;
         this.lastName = lastName;
