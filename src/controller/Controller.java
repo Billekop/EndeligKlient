@@ -21,7 +21,7 @@ public class Controller {
 
 
     Scanner input;
-    //loggedinusertoken er ny
+    //loggedInUserToken bliver sat lig med "". Når der logges ind, sættes den så lig token
     public static String loggedInUserToken = "";
 
     public Controller() {
@@ -68,33 +68,30 @@ public class Controller {
 
         System.out.println("indtast dit Fornavn: ");
         newUser.setFirstName(input.nextLine());
-        //newUser.addProperty("First_Name", input.nextLine()); udkommenteret. ligesom resten. var der før
 
 
         System.out.println("indtast dit Efternavn");
         newUser.setLastName(input.nextLine());
-        // newUser.addProperty("Last_Name", input.nextLine());
 
 
         System.out.println("indtast dit ønskede brugernavn");
         newUser.setUsername(input.nextLine());
-        //newUser.addProperty("Username", input.nextLine());
 
 
         System.out.println("indtast din Email");
         newUser.setEmail(input.nextLine());
-        //newUser.addProperty("Email", input.nextLine());
+
 
 
         System.out.println("indtast dit ønskede password");
         newUser.setPassword(input.nextLine());
-        //newUser.addProperty("Password", input.nextLine());
+
 
         newUser.setUserType(false);
-        // newUser.addProperty("Usertype", "0");
+
 
         //her tager den ovenstående information, og sender den videre til connection mappen, og ind i createUser metoden som newUser.
-        connection.createUser(newUser); //der kan være fejl her.
+        connection.createUser(newUser);
 
 
     }
@@ -115,6 +112,8 @@ public class Controller {
         String token = connection.authorizeLogin(username, password);
         //Derefter bliver kører en do try, som indeholder en switch, til at tilgå forskellige metoder.
         if (token != null) {
+            //her bliver den sat lig token
+            this.loggedInUserToken = token;
             do {
                 try {
                     System.out.println("Login menu");
@@ -130,17 +129,17 @@ public class Controller {
                             break;
                         case 2:
                             printCurriculums();
-                            //vis pensumliste(r)
+
                             break;
 
                         case 3:
                             printBook();
-                            // print en enkelt bog
+
                             break;
 
                         case 4:
-                            updateUser(); //ny
-                            //opdater en bruger
+                            updateUser();
+
                             break;
 
                         case 5:
@@ -245,27 +244,29 @@ public class Controller {
 
 
     }
-
-    public void updateUser() { //ny
+//sætter user lig null. Derefter sætter den user som new user, giver den 5 tomme felter til udfyldning og definerer false
+    //hvis user ikke er, den der nu er tildelt, så sættes user til this.loggedInUserToken
+    // sætter updateduser lig med informationen, som brugeren har indtastet i updateUserMenu
+    public void updateUser() {
         User user = null;
         User updatedUser = new User("", "", "", "", "", false);
         Scanner input = new Scanner(System.in);
         System.out.println(this.loggedInUserToken);
         if (!this.loggedInUserToken.equals("")) {
-            //user = connection.getUserBasedOnToken(this.loggedInUserToken);
+            user = connection.getUserBasedOnToken(this.loggedInUserToken);
         } else {
             System.out.println("Du skal logge ind først");
         }
         System.out.println(",Fornavn: " + user.getFirstName() + ",Efternavn:" + user.getLastName() + ",Brugernavn:" + user.getUsername() + ",Email:" + user.getEmail());
         updatedUser = updateUserMenu(updatedUser);
         System.out.println(new Gson().toJson(updatedUser));
-        //connection.updateUser(user.getUserID(), updatedUser);
-    }  // til her
+        connection.updateUser(user.getUserID(), updatedUser);
+    }
 
-
-    private User updateUserMenu(User newUser) { //ny
+//Brugeren indtaster information som bliver gemt i ovenstående metode.
+    private User updateUserMenu(User newUser) {
         int choice = -1;
-        System.out.println("Update menu");
+        System.out.println("Velkommen til update af brugeroplysninger. Udfyld venligst alle nedenestående felter og tryk 6 til sidst");
         System.out.println("Tryk 1. for at Fornavn");
         System.out.println("Tryk 2. for at Efternavn");
         System.out.println("Tryk 3. for at Brugernavn");
@@ -295,6 +296,7 @@ public class Controller {
                         return newUser;
                 }
             } catch (InputMismatchException e) {
+                //her er metoden til at brugeren kan indtaste.
                 String inp = input.nextLine();
                 if (choice == 1) newUser.setFirstName(inp);
                 if (choice == 2) newUser.setLastName(inp);
@@ -309,8 +311,7 @@ public class Controller {
 
 
 
-
-
+//printer det tildelte token. Hvis token ikke er tomt, så sletter den token
     public void deleteUser(){
         System.out.println("deleting user for token:"+loggedInUserToken);
         if(!loggedInUserToken.equals("")){
@@ -318,7 +319,7 @@ public class Controller {
         }
         loggedInUserToken = "";
     }
-
+ //logger ud og fjerner token.
     public void logout(){
         System.out.println("logging out:"+loggedInUserToken);
         connection.logOut(loggedInUserToken);

@@ -54,7 +54,7 @@ public class connection {
                 System.out.println(serverResponse);
                 //serverResponse=response;
             } else {
-                System.out.println("Det er ikke muligt at oprette en ny bruger -- createUser");
+                System.out.println("Det er ikke muligt at oprette en ny bruger ");
             }
         }
         clientResponse.close();
@@ -135,28 +135,7 @@ public class connection {
         clientResponse.close();
         return book;
     }
-    /**
-     *
-     * @param token
-     * @return
-     */
-  /* public static User getUserBasedOnToken(String token) {
-        ClientResponse clientResponse = HTTPrequest.post("/user/getuser", token);
-        User userJson = null;
 
-        if (clientResponse == null) {
-            System.out.println("Bruger ikke fundet");
-        } else {
-            System.out.println("===>"+clientResponse);
-            if (clientResponse.getStatus() == 200) {
-                userJson = clientResponse.getEntity(User.class);
-            } else {
-                System.out.println("returnerede ikke en status 200");
-            }
-        }
-        clientResponse.close();
-        return userJson;
-    }*/
     /**
      * Updating User.
      *
@@ -164,8 +143,10 @@ public class connection {
      * @param argUpdatedUser
      * @return
      */
+    //ClientResponse rammer httprequest.post og videre til path /user/updateuser, med et userid og 5 hash.
     public static String updateUser(int userId, User argUpdatedUser){
-        ClientResponse clientResponse = HTTPrequest.post("/updateuser/"+userId, Crypter.encryptDecryptXOR( new Gson().toJson(argUpdatedUser)));
+        ClientResponse clientResponse = HTTPrequest.post("/user/updateuser", userId+"#####"+( new Gson().toJson(argUpdatedUser)));
+        //ClientResponse clientResponse = HTTPrequest.post("/updateuser/"+userId, Crypter.encryptDecryptXOR( new Gson().toJson(argUpdatedUser)));
         String serverResponse = null;
         //hvis der er forbindelse til serveren, og at serveren returnerer en status 200, så bliver serverResponse returneret.
         if (clientResponse == null) {
@@ -175,22 +156,23 @@ public class connection {
             if (clientResponse.getStatus() == 200) {
                 System.out.println(serverResponse);
             } else {
-                System.out.println("Det er ikke muligt at oprette en ny bruger -- updateUser");
+                System.out.println("Det er ikke muligt at oprette en ny bruger");
             }
         }
         clientResponse.close();
         return serverResponse;
     }
-
+// tager token. tager post i httprequest og rammer path: /user/deleteuser på server siden med token.
+    //returnerer en status 200, ellers: kunne kke slette en bruger.
     public static void deleteUser(String token){
         ClientResponse clientResponse = HTTPrequest.post("/user/deleteuser", token); //Crypter.encryptDecryptXOR( new Gson().toJson()
         if (clientResponse == null) {
             System.out.println("Bruger ikke fundet");
         } else {
             if (clientResponse.getStatus() == 200) {
-                System.out.println("Succesfuld deleted ");
+                System.out.println("Din bruger er nu slettet");
             } else {
-                System.out.println("Kunne ikke deletion");
+                System.out.println("Kunne ikke slette din bruger");
             }
         }
         clientResponse.close();
@@ -200,20 +182,50 @@ public class connection {
      * Logout
      * @param token
      */
+    //Logger ud ved at benytte det token, som den den bruger, der er logget ind, har fået tildelt.
+    //rammer post i httprequest og derefter path /user/logout på server siden sammen med token
+    //returnerer en status 200 og serveren er så logget ud
     public static void logOut(String token){
         ClientResponse clientResponse = HTTPrequest.post("/user/logout", token); //Crypter.encryptDecryptXOR( new Gson().toJson()
         if (clientResponse == null) {
-            System.out.println("Bruger ikke fundet");
+            System.out.println("Der er ikke forbindelse");
         } else {
 
             if (clientResponse.getStatus() == 200) {
-                System.out.println("Succesfuld logget ud");
+                System.out.println("Du er nu logget ud");
             } else {
                 System.out.println("Kunne ikke logge ud");
             }
         }
         clientResponse.close();
     }
+
+    /**
+     * GetUser based on the token provided.
+     * @param token
+     * @return
+     */
+    //Get user baseret på den token som bliver tildelt.
+    public static User getUserBasedOnToken(String token) {
+        ClientResponse clientResponse = HTTPrequest.post("/user/getuser", token);
+        User userJson = null;
+
+        if (clientResponse == null) {
+            // hvis client response er == null
+            System.out.println("Der er ingen forbindelse");
+        } else {
+
+            System.out.println("===>"+clientResponse);
+            if (clientResponse.getStatus() == 200) {
+                userJson = clientResponse.getEntity(User.class);
+            } else {
+                System.out.println("returnerede ikke en status 200");
+            }
+        }
+        clientResponse.close();
+        return userJson;
+    }
+
 
 }
 

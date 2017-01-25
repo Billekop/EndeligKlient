@@ -37,7 +37,7 @@ public class HTTPrequest {
         }
         return clientResponse;
     }
-//bruges til login.
+
     public static ClientResponse post(String path, String json) {
         ClientResponse clientResponse = null;
         try {
