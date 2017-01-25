@@ -119,7 +119,7 @@ public class Controller {
                     System.out.println("Login menu");
                     System.out.println("Tryk 1. for at printe bøger");
                     System.out.println("Tryk 2. for at vise pensumliste og tilhørende bøger");
-                    System.out.println("Tryk 3. for at printe en enkelt bog til priser");
+                    System.out.println("Tryk 3. for at printe en enkelt bog og tilhørende priser");
                     System.out.println("Tryk 4. for at opdatere dine brugeroplysninger");
                     System.out.println("Tryk 5. for at slette bruger");
                     System.out.println("Tryk 6. for at logge ud");
@@ -251,7 +251,7 @@ public class Controller {
         User user = null;
         User updatedUser = new User("", "", "", "", "", false);
         Scanner input = new Scanner(System.in);
-        System.out.println(this.loggedInUserToken);
+        //System.out.println(this.loggedInUserToken);
         if (!this.loggedInUserToken.equals("")) {
             user = connection.getUserBasedOnToken(this.loggedInUserToken);
         } else {
@@ -259,7 +259,7 @@ public class Controller {
         }
         System.out.println(",Fornavn: " + user.getFirstName() + ",Efternavn:" + user.getLastName() + ",Brugernavn:" + user.getUsername() + ",Email:" + user.getEmail());
         updatedUser = updateUserMenu(updatedUser);
-        System.out.println(new Gson().toJson(updatedUser));
+      // System.out.println(new Gson().toJson(updatedUser));
         connection.updateUser(user.getUserID(), updatedUser);
     }
 
@@ -313,7 +313,7 @@ public class Controller {
 
 //printer det tildelte token. Hvis token ikke er tomt, så sletter den token
     public void deleteUser(){
-        System.out.println("deleting user for token:"+loggedInUserToken);
+        System.out.println("Sletter bruger med tilhørende token:"+loggedInUserToken);
         if(!loggedInUserToken.equals("")){
             connection.deleteUser(loggedInUserToken);
         }

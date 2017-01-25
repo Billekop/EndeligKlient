@@ -54,7 +54,7 @@ public class connection {
                 System.out.println(serverResponse);
                 //serverResponse=response;
             } else {
-                System.out.println("Det er ikke muligt at oprette en ny bruger ");
+                System.out.println(" ");
             }
         }
         clientResponse.close();
@@ -156,7 +156,7 @@ public class connection {
             if (clientResponse.getStatus() == 200) {
                 System.out.println(serverResponse);
             } else {
-                System.out.println("Det er ikke muligt at oprette en ny bruger");
+                System.out.println("");
             }
         }
         clientResponse.close();
@@ -215,7 +215,7 @@ public class connection {
             System.out.println("Der er ingen forbindelse");
         } else {
 
-            System.out.println("===>"+clientResponse);
+            //System.out.println("===>"+clientResponse);
             if (clientResponse.getStatus() == 200) {
                 userJson = clientResponse.getEntity(User.class);
             } else {
