@@ -23,7 +23,7 @@ public class connection {
     //laver et kald til serveren og tjekker i databasen under User login.
     public static String authorizeLogin(String username, String password) {
         UserLogin userLogin = new UserLogin(username,password);
-        ClientResponse clientResponse = HTTPrequest.post("/User/login", new Gson().toJson(userLogin));
+        ClientResponse clientResponse = HTTPrequest.post("/user/login", new Gson().toJson(userLogin));
         String token = null;
 
 // tjekker om der kommer respons fra serveren. else: ingen forbindelse. til sidst returner den et token
@@ -43,7 +43,7 @@ public class connection {
 // denne metode skal bruges til at oprette en ny bruger. Den er dog ikke funktionel.
     //bruger post og en HTTP requst til at ramma /User endpointed på serveren.
     public static String createUser(User newUser) {
-        ClientResponse clientResponse = HTTPrequest.post("/User/create",  new Gson().toJson(newUser));
+        ClientResponse clientResponse = HTTPrequest.post("/user/create",  new Gson().toJson(newUser));
         String serverResponse = null;
 //hvis der er forbindelse til serveren, og at serveren returnerer en status 200, så bliver serverResponse returneret.
         if (clientResponse == null) {
@@ -180,6 +180,39 @@ public class connection {
         }
         clientResponse.close();
         return serverResponse;
+    }
+
+    public static void deleteUser(String token){
+        ClientResponse clientResponse = HTTPrequest.post("/user/deleteuser", token); //Crypter.encryptDecryptXOR( new Gson().toJson()
+        if (clientResponse == null) {
+            System.out.println("Bruger ikke fundet");
+        } else {
+            if (clientResponse.getStatus() == 200) {
+                System.out.println("Succesfuld deleted ");
+            } else {
+                System.out.println("Kunne ikke deletion");
+            }
+        }
+        clientResponse.close();
+    }
+
+    /**
+     * Logout
+     * @param token
+     */
+    public static void logOut(String token){
+        ClientResponse clientResponse = HTTPrequest.post("/user/logout", token); //Crypter.encryptDecryptXOR( new Gson().toJson()
+        if (clientResponse == null) {
+            System.out.println("Bruger ikke fundet");
+        } else {
+
+            if (clientResponse.getStatus() == 200) {
+                System.out.println("Succesfuld logget ud");
+            } else {
+                System.out.println("Kunne ikke logge ud");
+            }
+        }
+        clientResponse.close();
     }
 
 }

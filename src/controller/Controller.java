@@ -15,7 +15,7 @@ import models.curriculum;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.InputMismatchException;
-
+import com.sun.jersey.api.client.ClientResponse;
 
 public class Controller {
 
@@ -144,12 +144,12 @@ public class Controller {
                             break;
 
                         case 5:
-                            //deleteUser();
+                            deleteUser();
 
                             break;
 
                         case 6:
-                            //logout();
+                            logout();
 
                         default:
                             System.out.println("Du bedes bruge én af valgmulighederne");
@@ -304,6 +304,25 @@ public class Controller {
             }
         } while (true);
 
+    }
+
+
+
+
+
+
+    public void deleteUser(){
+        System.out.println("deleting user for token:"+loggedInUserToken);
+        if(!loggedInUserToken.equals("")){
+            connection.deleteUser(loggedInUserToken);
+        }
+        loggedInUserToken = "";
+    }
+
+    public void logout(){
+        System.out.println("logging out:"+loggedInUserToken);
+        connection.logOut(loggedInUserToken);
+        loggedInUserToken = "";
     }
 }
 
